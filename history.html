@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+	<title>History</title>
+</head>
+<body style="background: #fff">
+	<header>
+		<nav>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="navigation col-md-12">
+						<div class="row">
+							<div class="menu-icon-section col-md-1 col-1">
+								<img src="./assets/menu.png" class="menu-icon">
+							</div>
+							<div class="nav-title col-md-10 col-10">
+								<h4 class="text-center">History</h4>
+							</div>
+							<div class="search-section col-md-1 col-1"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<section class="contents" style="overflow: auto;">
+		<div class="row">
+			<div class="sidebar col-md-1 col-2">
+				<ul>
+					<li><a href="./home-select.html"><img src="./assets/fork.png"></a></li>
+					<li><a href="./history.html"><img src="./assets/clipboard.png"></a></li>
+					<li><a href="#add-item" data-toggle="modal" data-target="#add-item-modal"><img src="./assets/add.png"></a></li>
+				</ul>
+			</div>
+			<div class="main-content hitory-contents col-md-11">
+				<div class="container">
+					<div class="tile-count">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="count-card">
+									<div class="card card-pink mb-3">
+										<div class="card-body">
+											<small class="card-title">Today’s Income</small>
+											<h5 class="card-value">Rp. 1.000.000 </h5>
+											<small class="card-text">+2% Yesterday</small>
+											<div class="round-overlay"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="count-card">
+									<div class="card card-blue mb-3">
+										<div class="card-body">
+											<small class="card-title">Order's</small>
+											<h5 class="card-value">3.270 </h5>
+											<small class="card-text">+5% Last Week</small>
+											<div class="round-overlay"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="count-card">
+									<div class="card card-purple mb-3">
+										<div class="card-body">
+											<small class="card-title">This Year’s Income</small>
+											<h5 class="card-value">Rp. 100.000.000.000 </h5>
+											<small class="card-text">+10% Last Year</small>
+											<div class="round-overlay"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>	
+					</div>
+					<div class="chart-section">
+						<div class="row">
+							<div class="col-6">
+								<h3>Revenue</h3>
+							</div>
+							<div class="col-6">
+								<select class="float-right range-select">
+									<option value="month">Month</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<canvas id="myChart" width="400" height="200"></canvas>
+							</div>
+						</div>
+					</div>
+					<div class="table-section">
+						<div class="row">
+							<div class="col-6">
+								<h3>Recent Order</h3>
+							</div>
+							<div class="col-6">
+								<select class="float-right range-select">
+									<option value="month">Today</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<table class="table table-responsive-sm">
+									<thead>
+										<tr>
+											<th scope="col">INVOICE</th>
+											<th scope="col">CASHIER</th>
+											<th scope="col">DATE</th>
+											<th scope="col">ORDERS</th>
+											<th scope="col">AMOUNT</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>#10928</td>
+											<td>Cashier 1</td>
+											<td>06 October 2019</td>
+											<td>Ice Tea, Salad With peanut sauce</td>
+											<td>Rp. 120.000</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	</section>
+	<!-- Add Item Modal -->
+	<div class="modal fade" id="add-item-modal" tabindex="-1" role="dialog" aria-labelledby="add-item-modalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="add-item-modalLabel">Add Item</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Name</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Image</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Price</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Category</label>
+							<div class="col-sm-6">
+								<select class="form-control" required>
+									<option value="" selected>Category</option>
+									<option value="2">Category 2</option>
+								</select>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn my-danger col-md-3" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn my-primary col-md-3">Add</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Checkout Modal -->
+	<div class="modal fade checkout-modal" id="checkoutmodal" tabindex="-1" role="dialog" aria-labelledby="checkoutmodalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="row">
+						<div class="col-12" style="position: relative;top: -8px">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="col-6">
+							<h5 class="modal-title" id="checkoutmodalLabel">Checkout</h5>
+						</div>
+						<div class="col-6" align="right">
+							<span>Receipt no: #010410919</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<span class="chasier-name">Chasier: Pevita Pearce </span>
+						</div>
+					</div>
+				</div>
+				<div class="modal-body">
+					<div class="checkout-item row">
+						<div class="col-6 item-name">Cofee Latte 1x</div>
+						<div class="col-6 item-price">Rp. 15.000</div>
+					</div>
+					<div class="checkout-item row">
+						<div class="col-6 item-name">Black Forest 1x</div>
+						<div class="col-6 item-price">Rp. 30.000</div>
+					</div>
+					<div class="checkout-item row">
+						<div class="col-6 item-name">Salmon Truffle 1x</div>
+						<div class="col-6 item-price">Rp. 60.000</div>
+					</div>
+					<div class="checkout-item row">
+						<div class="col-6 item-name">Ppn 10%</div>
+						<div class="col-6 item-price">Rp. 10.000</div>
+					</div>
+					<div class="checkout-total row">
+						<div class="col-12" align="right">Total: Rp. 115.000</div>
+					</div>
+					<div class="checkout-item row">
+						<div class="col-md-12 item-name">Payment: Cash</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<div class="button-section row">
+						<button type="button" class="btn my-danger col-12">Print</button>
+						<span class="col-12" style="font-weight: 600;text-align: center;margin-top: 10px">Or</span>
+						<button type="button" class="btn my-primary col-12">Send Email</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="./assets/js/chart.js/dist/Chart.js"></script>
+	<script>
+		var ctx = document.getElementById('myChart').getContext('2d');
+		var myChart = new Chart(ctx, {
+			type: 'line',
+			data: {
+				labels: ['', '', '', '', '', '','', '', '', '', '', ''],
+				datasets: [{
+					label: '# of Votes',
+					data: [10000, 30000, 10000, 30000, 50000, 10000,10000, 20000, 10000, 30000, 4400, 22000],
+					borderColor: '#FFB8C6',
+					backgroundColor: 'transparent',
+					borderWidth: 3,
+					hoverRadius: 13,
+					tension: 0.3
+				},
+				{
+					label: '# of Votes',
+					data: [0, 20000, 1000, 4000, 26000, 20000,25000, 1000, 30000, 26000, 20000, 12500],
+					backgroundColor: 'transparent',
+					borderWidth: 3,
+					hoverRadius: 13
+				}
+				]
+			},
+			options: [{
+				title: {
+					display: true,
+					text: 'Custom Chart Title'
+				},
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true
+						}
+					}]
+				}
+			}]
+		});
+	</script>
+	<script src="./assets/js/script.js"></script>
+</body>
+</html>
